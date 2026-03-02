@@ -1,66 +1,68 @@
-Czech Lifestyle Decision Dashboard
-PostgreSQL + Power BI Analytical Project
+# Czech Lifestyle Decision Dashboard
 
-Project Overview
-This project explores how different types of people would rank Czech cities based on what matters most to them.
-A student, an IT professional, and a family don’t evaluate a city the same way.
-Instead of looking at raw numbers, this model calculates a weighted score for each city based on persona-specific priorities.
-The result is a structured, explainable ranking system that shows not only which city ranks highest — but why.
+PostgreSQL + Power BI Project
 
-Objective
-To build a transparent decision-support model that:
-Compares Czech cities across multiple lifestyle indicators
-Applies different weights depending on the selected persona
-Produces a final score per city
-Highlights the top contributing factors behind each ranking
+---
 
-Data & Modeling Approach
-The project is built using a structured star-schema design.
+Choosing where to live depends on priorities. A student, an IT professional, and a family evaluate a city differently.
 
-Core Tables
-fact_persona_scores – final weighted score per city, persona, and month
-fact_top_reasons – top 3 metrics contributing to each score
+This project builds a weighted scoring model that ranks Czech cities based on persona-specific preferences. Instead of presenting raw indicators, it calculates a structured score and highlights the main factors influencing each ranking.
 
-Dimensions
-City
-Persona
-Month
-Metric
-Source
+---
 
-All scoring logic is handled in PostgreSQL using normalization and weighted aggregation.
+## What This Project Does
 
-Scoring Method
-Each persona is assigned custom weights.
+- Compares cities using multiple lifestyle indicators  
+- Applies different weights depending on the selected persona  
+- Produces a final weighted score per city  
+- Identifies the top 3 factors driving each score  
 
-Example:
-Students prioritize affordability and education.
-IT professionals prioritize salary and lifestyle.
-Families prioritize safety, healthcare, and environment.
-Each metric is normalized to ensure comparability.
+---
 
-The final score is calculated as:
+## How It Works
+
+The data model follows a star-schema structure.
+
+Core tables:
+- `fact_persona_scores`
+- `fact_top_reasons`
+
+Supporting dimensions:
+- City  
+- Persona  
+- Month  
+- Metric  
+- Source  
+
+All transformations and scoring logic are implemented in PostgreSQL.  
+Metrics are normalized before weights are applied to ensure comparability.
+
+Final score formula:
+
 Weighted Score = Σ (Normalized Metric × Persona Weight)
 
-This ensures consistent, explainable, and fair ranking.
+---
 
-Dashboard Capabilities
+## Dashboard
 
-The Power BI dashboard allows:
-Interactive persona selection
-Monthly trend comparison
-City-level ranking
-Breakdown of top contributing metrics
-Identification of the best city per persona
-The focus is clarity and decision support, not visual overload.
+The Power BI report allows interactive exploration by:
 
-Key Observations (Sample Data)
-Prague ranks highest for IT professionals due to strong salary and lifestyle indicators.
-Ostrava performs better for students because of lower living costs.
-Family rankings are driven mainly by safety, healthcare, and pollution levels.
+- Persona  
+- Month  
+- City  
 
-Tools Used
-PostgreSQL (data modeling & scoring logic)
-SQL (normalization, ranking, aggregation)
-Power BI (data modeling, DAX, visualization)
-GitHub (project documentation & version control)
+Users can compare rankings, analyze trends, and understand the main drivers behind each result.
+
+---
+
+## Tools
+
+PostgreSQL  
+SQL  
+Power BI  
+GitHub  
+
+---
+
+Amanjot Kaur  
+Computer Science Student – Data & Analytics
