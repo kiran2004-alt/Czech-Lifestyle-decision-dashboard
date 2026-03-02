@@ -2,6 +2,8 @@
 
 PostgreSQL + Power BI Project
 
+Persona-based city ranking model built with PostgreSQL scoring logic and Power BI analytics.
+
 ---
 
 Choosing where to live depends on priorities. A student, an IT professional, and a family evaluate a city differently.
