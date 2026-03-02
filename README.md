@@ -66,5 +66,5 @@ GitHub
 
 ---
 
-Amanjot Kaur  
+Kirannjot Kaur  
 Computer Science Student – Data & Analytics
